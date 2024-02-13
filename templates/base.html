@@ -9,13 +9,13 @@
 <h2>Список профессий</h2>
  {% if list2 == 'ol'%}<ol>
     {% for item in list_prof %}
-        <li>item</li>
+        <li>{{item}}</li>
     {% endfor %}
     </ol>
  {% elif list2 == 'ul' %}
     <ul>
     {% for item in list_prof %}
-        <li>item</li>
+        <li>{{item}}</li>
     {% endfor %}
     </ul>
  {% else %}
