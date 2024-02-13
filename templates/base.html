@@ -5,12 +5,21 @@
     <title>Четное-нечетное</title>
 </head>
 <body>
- {% if "инженер" in prof or "строитель" in prof %}
-    <h2>Инженерные тренажеры</h2>
-    <img src="{{ url_for('static', filename='it1.png') }}" alt="Схема расположения инженерных тренажеров">
-  {% else %}
-    <h2>Научные симуляторы</h2>
-    <img src="{{ url_for('static', filename='it2.png') }}" alt="Схема расположения научных симуляторов">
-  {% endif %}
+<h1>миссия клонизации марса</h1>
+<h2>Список профессий</h2>
+ {% if list2 == 'ol'%}<ol>
+    {% for item in list_prof %}
+        <li>item</li>
+    {% endfor %}
+    </ol>
+ {% elif list2 == 'ul' %}
+    <ul>
+    {% for item in list_prof %}
+        <li>item</li>
+    {% endfor %}
+    </ul>
+ {% else %}
+    <h2>неправильно набран адрес</h2>
+ {% endif %}
 </body>
 </html>
